@@ -7,6 +7,7 @@
     <title>Devemmy - Software Developer in Port harcourt Rivers state</title>
     <link rel="shortcut icon" href="./assets/img/icons/favicon.PNG" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/plugins/icofont.min.css">
+    <link rel="stylesheet" href="./assets/scripts/plugins/OwlCarousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="./assets/css/plugins/swiper-bundle.min.css">
     <link rel="stylesheet" href="./assets/css/plugins/material-scrolltop.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -96,7 +97,11 @@
     </div>
     <div class="fixed top-0 right-0 w-screen h-screen transition-all duration-500 opacity-0 -z-50 overlay bg-overlay"></div>
 
-    <section class="hero-section relative overflow-hidden py-[20px] lg:py-[115px] lg:pb-0">
+    <section class="hero-section relative py-[20px] lg:py-[115px] lg:pb-0">
+        <div class="hero-circle-top"></div>
+        <div class="hero-circle-box">
+            <div class="hero-circle-bottom"></div>
+        </div>
         <!-- <div class="pt-12 lg:pt-0 hero-image w-60 md:w-[400px] relative">
             <img src="./assets/img/me.png" alt class="z-10 object-cover max-w-full">
             <div class="image-half-round-shape absolute bottom-[4%] md:bottom-[6%] left-1/2 w-[150px] h-[250px] md:w-[260px] md:h-[400px] 
@@ -144,12 +149,12 @@
             <h2 class="px-3 mt-6 text-4xl lg:text-[70px] font-bold text-white font-cormorant section-title leading-[1.2]">Services I Provide For My Clients.</h2>
         </div>
         
-        <div class="relative w-11/12 overflow-hidden service-display-wrapper pb-14 contain">
+        <div class="relative w-11/12 overflow-hidden service-display-wrapper contain">
             <div class="w-full services-swiper-container">
                 <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
+                <div class="owl-carousel">
                     <!-- Slides -->
-                    <div class="service-item swiper-slide">
+                    <div class="service-item group">
                         <div class="inner-shape inner-shape-top-right"></div>
                         <div class="icon"><img src="./assets/img/icons/service-icon-1.png" alt=""></div>
                         <h4 class="title"><a>Front End / UI/UX Design</a></h4>
@@ -169,7 +174,7 @@
                         </ul>
                         <div class="inner-shape inner-shape-bottom-right"></div>
                     </div>
-                    <div class="service-item swiper-slide">
+                    <div class="service-item group">
                         <div class="inner-shape inner-shape-top-right"></div>
                         <div class="icon"><img src="assets/img/icons/service-icon-2.png" alt=""></div>
                         <h4 class="title"><a >Backend Development/ API's</a></h4>
@@ -186,7 +191,7 @@
                         </ul>
                         <div class="inner-shape inner-shape-bottom-right"></div>
                     </div>
-                    <div class="service-item swiper-slide">
+                    <div class="service-item group">
                         <div class="inner-shape inner-shape-top-right"></div>
                         <div class="icon"><img src="assets/img/icons/service-icon-3.png" alt=""></div>
                         <h4 class="title"><a >Android Development</a></h4>
@@ -199,7 +204,7 @@
                         </ul>
                         <div class="inner-shape inner-shape-bottom-right"></div>
                     </div>
-                    <div class="service-item swiper-slide">
+                    <div class="service-item group">
                         <div class="inner-shape inner-shape-top-right"></div>
                         <div class="icon"><img src="assets/img/icons/service-icon-3.png" alt=""></div>
                         <h4 class="title"><a>Blockchain Development</a></h4>
@@ -208,12 +213,8 @@
                             <li>GOLANG</li>
                             
                         </ul>
-                        <div class="inner-shape inner-shape-bottom-right"></div>
                     </div>
-                </div>                
-            </div>
-            <div class="service-display-dots">
-                <div class="swiper-pagination"></div>
+                </div>          
             </div>
         </div>
     </div>
@@ -281,7 +282,7 @@
                     <img src="./assets/img/icons/counterup-icon-1.png" alt="" class="w-[50%]">
                 </div>
                 <div class="flex flex-col items-center content lg:items-start">
-                    <div class="number text-white mb-6 text-[40px] lg:text-[52px] font-light">50<span class="">+</span></div>
+                    <div class="number text-white mb-6 text-[40px] lg:text-[52px] font-light"><span class="val" data-value="50">50</span><span class="">+</span></div>
                     <p class="text-center text-text">Happy Clients</p>
                 </div>
             </div>
@@ -291,7 +292,7 @@
                     <img src="./assets/img/icons/counterup-icon-2.png" alt="" class="w-[50%]">
                 </div>
                 <div class="flex flex-col items-center content lg:items-start">
-                    <div class="number text-white mb-6 text-[40px] lg:text-[52px] font-light">50<span class="">+</span></div>
+                    <div class="number text-white mb-6 text-[40px] lg:text-[52px] font-light"><span class="val" data-value="50">50</span><span class="">+</span></div>
                     <p class="text-center text-text">Projects Completed</p>
                 </div>
             </div>
@@ -301,7 +302,7 @@
                     <img src="./assets/img/icons/counterup-icon-3.png" alt="" class="w-[50%]">
                 </div>
                 <div class="flex flex-col items-center content lg:items-start">
-                    <div class="number text-white mb-6 text-[40px] lg:text-[52px] font-light">4<span class="">+</span></div>
+                    <div class="number text-white mb-6 text-[40px] lg:text-[52px] font-light"><span class="val lessVal" data-value="4">4</span><span class="">+</span></div>
                     <p class="text-center text-text">Years of Experience</p>
                 </div>
             </div>
@@ -561,7 +562,9 @@
         </div>
     </div>
     
-    <div class="details">
+    <div class="details relative overflow-hidden">
+        <div class="hero-circle-top"></div>
+        <div class="hero-circle-top-right"></div>
         <div class="sdetails-wrapper contain mx-auto w-11/12 py-[75px] md:py-[115px] lg:py-[135px]">
             <div class="flex flex-col md:flex-row flex-wrap gap-[40px] md:gap-[70px] lg:gap-[35px] xl:gap-[30px]">
                 <a href="tel:+2348125510572" class="info-box text-white group flex items-center gap-4 md:gap-6">
@@ -596,6 +599,7 @@
     <script src="./assets/scripts/plugins/jquery.min.js"></script>
     <script src="./assets/scripts/plugins/scrollreveal.js"></script>
     <script src="./assets/scripts/plugins/jquery.appear.js"></script>
+    <script src="./assets/scripts/plugins/OwlCarousel/owl.carousel.min.js"></script>
     <script src="./assets/scripts/plugins/swiper-bundle.min.js"></script>
     <script src="./assets/scripts/index.js"></script>
 </body>

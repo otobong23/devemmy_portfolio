@@ -1,0 +1,77 @@
+<!-- Slides -->
+                    <div class="service-item swiper-slide">
+                        <div class="inner-shape inner-shape-top-right"></div>
+                        <div class="icon"><img src="./assets/img/icons/service-icon-1.png" alt=""></div>
+                        <h4 class="title"><a>Front End / UI/UX Design</a></h4>
+                        <ul class="list-item">
+                            <li><b>USING</b></li>
+                            <li>HTML/CSS</li>
+                            <li>JavaScript</li>
+                            <li>ReactJS</li>
+                            <li>NextJS</li>
+                            <li>Wordpress</li>
+                            <li><b>BUILDING</b></li>
+                            <li>Landing Pages</li>
+                            <li>User Flow</li>
+                            <li>Wireframing</li>
+                            <li>Prototyping</li>
+                            <li>Mobile App Design</li>
+                        </ul>
+                        <div class="inner-shape inner-shape-bottom-right"></div>
+                    </div>
+                    <div class="service-item swiper-slide">
+                        <div class="inner-shape inner-shape-top-right"></div>
+                        <div class="icon"><img src="assets/img/icons/service-icon-2.png" alt=""></div>
+                        <h4 class="title"><a >Backend Development/ API's</a></h4>
+                        <ul class="list-item">
+                            <li><b>USING</b></li>
+                            <li>Nodejs</li>
+                            <li>Golang</li>
+                            <li>Express</li>
+                            <li>NestJS</li>
+                            <li>MongoDB</li>
+                            <li>Sql</li>
+                            <li><b>BUILDING</b></li>
+                            <li>Building all kinds of programmable backend</li>
+                        </ul>
+                        <div class="inner-shape inner-shape-bottom-right"></div>
+                    </div>
+                    <div class="service-item swiper-slide">
+                        <div class="inner-shape inner-shape-top-right"></div>
+                        <div class="icon"><img src="assets/img/icons/service-icon-3.png" alt=""></div>
+                        <h4 class="title"><a >Android Development</a></h4>
+                        <ul class="list-item">
+                            <li><b>USING</b></li>
+                            <li>React Native</li>
+                            <li>Expo</li>
+                            <li><b>BUILDING</b></li>
+                            <li>Building all kinds of mobile applications </li>
+                        </ul>
+                        <div class="inner-shape inner-shape-bottom-right"></div>
+                    </div>
+                    <div class="service-item swiper-slide">
+                        <div class="inner-shape inner-shape-top-right"></div>
+                        <div class="icon"><img src="assets/img/icons/service-icon-3.png" alt=""></div>
+                        <h4 class="title"><a>Blockchain Development</a></h4>
+                        <ul class="list-item">
+                            <li>USING</li>
+                            <li>GOLANG</li>
+                            
+                        </ul>
+                        <div class="inner-shape inner-shape-bottom-right"></div>
+                    </div>
+
+
+                     md:max-w-[310px] lg:max-w-[380px]
+
+let ele = document.querySelector('.owl-stage-outer');
+let width = ele.offsetWidth;
+
+let serviceItem = document.querySelectorAll('.service-item');
+
+serviceItem.forEach(item => {
+    item.style.width = `calc(calc(${width}px / 100) * 30)`;
+    item.style.marginInline = `calc(calc(calc(${width}px / 100) * 10) / 3)`;
+});
+
+

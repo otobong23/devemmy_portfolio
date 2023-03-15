@@ -16,28 +16,39 @@ $(window).on("scroll", function () {
   overlay.removeClass("active");
 });
 
-const swiper = new Swiper(".services-swiper-container", {
-  slidesPerView: 3,
-  speed: 1500,
-  loop: true,
-  spaceBetween: 45,
-  pagination: {
-    el: ".service-display-dots .swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
+
+// servicesSwiper.owlCarousel
+if(document.querySelector(".services-swiper-container .owl-carousel")){
+  const servicesSwiper = $(".services-swiper-container .owl-carousel");
+
+  servicesSwiper.owlCarousel({
+    items: 4,
+    dots: true,
+    dotsEach: true,
+    nav: false,
+    // center: true,
+    autoplay: true,
+    autoplayTimeout: 3e5,
+    autoplayHoverPause: true,
+    lazyLoad: true,
+    smartSpeed: 700,
+    loop: true,
+    margin: 25,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      768: {
+        items: 2,
+      },
+      1024: {
+        items: 3,
+      },
     },
-    768: {
-      slidesPerView: 2,
-    },
-    1200: {
-      slidesPerView: 3,
-      loop: false,
-    },
-  },
-});
+  });
+}
+
+
 
 const projectSwiper = new Swiper(".project-container .swiper", {
   slidesPerView: 1,
@@ -86,25 +97,85 @@ const swiperT = new Swiper(".testimonial-container .swiper", {
   },
 });
 
-// if($('.progress-bar').length){
-//   $('.progress-bar').appear(function(){
-//       var el = $(this);
-//       var percent = el.data('value');
-//       $(el).css('width',percent+'%');
-//   },{accY: 0});
-// };
-
-
-function progress(){
-  $('.progress-bar').appear();
-  $('.progress-bar').on('appear',function(){
+function progress() {
+  $(".progress-bar").appear();
+  $(".progress-bar").one("appear", function () {
+    let count = 0;
     var el = $(this);
-    var percent = el.data('value');
-    $(el).css({
-      width: `${percent}%`
-    });
+    var percent = el.data("value");
+    if(count == percent){
+      console.log('loaded')
+    }else{
+      let timeout = setInterval(()=>{
+        if(count == percent){
+          count = count;
+          clearInterval(timeout)
+        }else{
+          $(el).css({
+            width: `${count > percent ? percent : count++}%`,
+          });
+        }
+      }, 27)
+    }
   });
 }
 progress();
 
-$('body').materialScrollTop();
+// $("body").materialScrollTop();
+
+function numberCount(){
+  $(".number .val").appear();
+  $(".number .val").one("appear", function(){
+    let count = 0;
+    var el = $(this);
+    var value = el.data("value");
+    if(count == value){
+      console.log('loaded')
+    }else{
+      let timeout = setInterval(()=>{
+        if(count == value){
+          count = count;
+          clearInterval(timeout)
+        }else{
+          el.text(count++ > value ? value : count)
+        }
+      }, 50)
+    }
+  });
+  $(".number .val.lessVal").one("appear", function(){
+    let count = 0;
+    var el = $(this);
+    var value = el.data("value");
+    if(count == value){
+      console.log('loaded')
+    }else{
+      let timeout = setInterval(()=>{
+        if(count == value){
+          count = count;
+          clearInterval(timeout)
+        }else{
+          el.text(count++ > value ? value : count)
+        }
+      }, 500)
+    }
+  });
+}
+
+window.addEventListener('load', numberCount)
+
+const eduButton = $('.education');
+const exeButton = $('.experience');
+const detailContent = $('.detail-content');
+
+function removeEle() {
+  detailContent.removeClass("active-details");
+  exeButton.removeClass("active");
+  eduButton.addClass('active');
+}
+function addEle() {
+  detailContent.addClass("active-details");
+  eduButton.removeClass("active");
+  exeButton.addClass('active');
+}
+eduButton.on('click', removeEle);
+exeButton.on('click', addEle)

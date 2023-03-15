@@ -12,97 +12,101 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body class="bg-very-dark-blue font-["poppins"] relative z-10">
-    <header class="relative py-6 lg:my-3 bg-dark-blue lg:bg-transparent contain">
-        <div class="flex items-center justify-between w-11/12 mx-auto header-section">
-            <a href="index.html" class=" logo w-[163.5px] md:w-[336px] md:max-w-full lg:max-w-[272px]">
-                <img src="./assets/img/logo.png" alt="logo" class="object-cover w-full">
-            </a>
+    <div class="wrapper relative overflow-hidden">
+        <header class="relative py-6 lg:my-3 bg-dark-blue lg:bg-transparent contain">
+            <div class="flex items-center justify-between w-11/12 mx-auto header-section">
+                <a href="index.html" class=" logo w-[163.5px] md:w-[336px] md:max-w-full lg:max-w-[272px]">
+                    <img src="./assets/img/logo.png" alt="logo" class="object-cover w-full">
+                </a>
+        
+                <ul class="nav lg:flex lg:gap-[2em] xl:gap-[5em] hidden">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+        
+                <a href="https://forms.gle/pJCvXMgaQoxfT3pR9" target="_blank" class="hidden button-primary lg:flex">
+                    Hire Me
+                    <i class="icofont-double-right"></i>
+                </a>
+                
+                <div class="menu ml-auto lg:hidden">
+                    <span id="menu-btn" class="text-2xl text-white">
+                        <i class="icofont-navigation-menu"></i>
+                    </span>
+                </div>
+            </div>
+        </header>
     
-            <ul class="nav lg:flex lg:gap-[2em] xl:gap-[5em] hidden">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="blog">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="faq.html">FAQ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
-    
-            <a href="https://forms.gle/pJCvXMgaQoxfT3pR9" target="_blank" class="hidden button-primary lg:flex">
-                Hire Me
-                <i class="icofont-double-right"></i>
-            </a>
-            
-            <div class="menu ml-auto lg:hidden">
-                <span id="menu-btn" class="text-2xl text-white">
-                    <i class="icofont-navigation-menu"></i>
+        <div class="mobile-nav fixed w-[300px] md:w-[400px] h-screen -right-full top-0 bg-light-blue pt-[10%] z-[9999] transition-all duration-500 lg:hidden">
+            <div class="pl-5">
+                <span id="close-btn" class="text-white text-lg flex justify-center items-center rounded-full w-10 h-10 border-border-close border-[0.2px] ml-5">
+                    <i class="icofont-close-line"></i>
                 </span>
             </div>
-        </div>
-    </header>
-
-    <div class="mobile-nav fixed w-[300px] md:w-[400px] h-screen -right-full top-0 bg-light-blue pt-[10%] z-[9999] transition-all duration-500 lg:hidden">
-        <div class="pl-5">
-            <span id="close-btn" class="text-white text-lg flex justify-center items-center rounded-full w-10 h-10 border-border-close border-[0.2px] ml-5">
-                <i class="icofont-close-line"></i>
-            </span>
-        </div>
-
-        <ul class="nav_mobile mt-[24%] flex flex-col gap-4 pl-8">
-            <li class="nav-item">
-                <a class="mobile-nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="mobile-nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="mobile-nav-link" href="blog">Blog</a>
-            </li>
-            <li class="nav-item">
-                <a class="mobile-nav-link" href="faq.html">Faq</a>
-            </li>
-            <li class="nav-item">
-                <a class="mobile-nav-link" href="contact.html">Contact</a>
-            </li>
-        </ul>
-
-        <div class="social-links flex justify-center gap-4 pt-[12%] w-full">
-            <a target="_blank" href="https://www.facebook.com/emmanuel.luis.102/">
-                <span id="close_btn" class="text-white text-base flex justify-center items-center rounded-full w-10 h-10 border-border-close border-[0.2px] ml-3">
-                    <i class="icofont-facebook"></i>
-                </span>
-            </a>
-
-            <a target="_blank" href="https://twitter.com/DevemmyM?t=bgKgurjRnUcRF6aKQhFuKw&s=09">
-                <span id="close_btn" class="text-white text-base flex justify-center items-center rounded-full w-10 h-10 border-border-close border-[0.2px] ml-3">
-                    <i class="icofont-twitter"></i>
-                </span>
-            </a>
-
-            <a target="_blank" href="https://www.linkedin.com/in/emmanuel-lucky-233ab11a3">
-                <span id="close_btn" class="text-white text-base flex justify-center items-center rounded-full w-10 h-10 border-border-close border-[0.2px] ml-3">
-                    <i class="icofont-linkedin"></i>
-                </span>
-            </a>
-        </div>
-    </div>
-    <div class="fixed top-0 right-0 w-screen h-screen transition-all duration-500 opacity-0 -z-50 overlay bg-overlay"></div>
-
-    <div class="title-section pt-[60px] pb-[45px] md:pb-[90px]">
-        <div class="title-content flex flex-col items-center">
-            <h2 class="text-[40px] md:text-[50px] text-center lg:text-[70px] font-bold text-white font-cormorant section-title mb-[8px]">Contact Me</h2>
-            <ul class="relative title-link flex items-center justify-center text-base font-light py-5 px-10 w-max bg-dark-blue leading-[1] mt-[20px] rounded-[30px]">
-                <li><a href="index.html" class="after:content-['||'] after:px-3 text-text">Home</a></li>
-                <li class="active" aria-current="page" class="text-white"><span class="text-white">Contact</span></li>
+    
+            <ul class="nav_mobile mt-[24%] flex flex-col gap-4 pl-8">
+                <li class="nav-item">
+                    <a class="mobile-nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="mobile-nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="mobile-nav-link" href="blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="mobile-nav-link" href="faq.html">Faq</a>
+                </li>
+                <li class="nav-item">
+                    <a class="mobile-nav-link" href="contact.html">Contact</a>
+                </li>
             </ul>
+    
+            <div class="social-links flex justify-center gap-4 pt-[12%] w-full">
+                <a target="_blank" href="https://www.facebook.com/emmanuel.luis.102/">
+                    <span id="close_btn" class="text-white text-base flex justify-center items-center rounded-full w-10 h-10 border-border-close border-[0.2px] ml-3">
+                        <i class="icofont-facebook"></i>
+                    </span>
+                </a>
+    
+                <a target="_blank" href="https://twitter.com/DevemmyM?t=bgKgurjRnUcRF6aKQhFuKw&s=09">
+                    <span id="close_btn" class="text-white text-base flex justify-center items-center rounded-full w-10 h-10 border-border-close border-[0.2px] ml-3">
+                        <i class="icofont-twitter"></i>
+                    </span>
+                </a>
+    
+                <a target="_blank" href="https://www.linkedin.com/in/emmanuel-lucky-233ab11a3">
+                    <span id="close_btn" class="text-white text-base flex justify-center items-center rounded-full w-10 h-10 border-border-close border-[0.2px] ml-3">
+                        <i class="icofont-linkedin"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="fixed top-0 right-0 w-screen h-screen transition-all duration-500 opacity-0 -z-50 overlay bg-overlay"></div>
+    
+        <div class="title-section pt-[60px] pb-[45px] md:pb-[90px] relative">
+            <div class="hero-circle-top"></div>
+            <div class="hero-circle-bottom"></div>
+            <div class="title-content flex flex-col items-center">
+                <h2 class="text-[40px] md:text-[50px] text-center lg:text-[70px] font-bold text-white font-cormorant section-title mb-[8px]">Contact Me</h2>
+                <ul class="relative title-link flex items-center justify-center text-base font-light py-5 px-10 w-max bg-dark-blue leading-[1] mt-[20px] rounded-[30px]">
+                    <li><a href="index.html" class="after:content-['||'] after:px-3 text-text">Home</a></li>
+                    <li class="active" aria-current="page" class="text-white"><span class="text-white">Contact</span></li>
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -182,7 +186,9 @@
         </div>
     </div>
 
-    <div class="details">
+    <div class="details relative overflow-hidden">
+        <div class="hero-circle-top"></div>
+        <div class="hero-circle-top-right"></div>
         <div class="sdetails-wrapper contain mx-auto w-11/12 py-[75px] md:py-[115px] lg:py-[135px]">
             <div class="flex flex-col md:flex-row flex-wrap gap-[40px] md:gap-[70px] lg:gap-[35px] xl:gap-[30px]">
                 <a href="tel:+2348125510572" class="info-box text-white group flex items-center gap-4 md:gap-6">
