@@ -22,15 +22,15 @@
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
   cursor: hand;
   border-radius: 50%;
-  background: #4caf50;
+  z-index: 999;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.25, 0, 1);
-  -ms-transition: all 0.3s cubic-bezier(0.25, 0.25, 0, 1);
-  -moz-transition: all 0.3s cubic-bezier(0.25, 0.25, 0, 1);
-  -o-transition: all 0.3s cubic-bezier(0.25, 0.25, 0, 1);
-  transition: all 0.3s cubic-bezier(0.25, 0.25, 0, 1); }
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.25, 0, 1);
+  -ms-transition: all 0.4s cubic-bezier(0.25, 0.25, 0, 1);
+  -moz-transition: all 0.4s cubic-bezier(0.25, 0.25, 0, 1);
+  -o-transition: all 0.4s cubic-bezier(0.25, 0.25, 0, 1);
+  transition: all 0.4s cubic-bezier(0.25, 0.25, 0, 1); }
   .material-scrolltop:hover {
-    background-color: #4caf50;
+    background-color: rgb(37,39,52);
     text-decoration: none;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5), 0 3px 15px rgba(0, 0, 0, 0.5); }
   .material-scrolltop::before {
@@ -45,16 +45,19 @@
     content: '';
     width: 0;
     border-radius: 100%;
-    background: #67bb6a; }
+    background: rgb(255,255,255, 0.1); }
   .material-scrolltop:active::before {
     width: 120%;
     padding-top: 120%;
-    -webkit-transition: all 0.2s ease-out;
-    -ms-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out; }
+    -webkit-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out; }
   .material-scrolltop.reveal {
+    background: rgb(37,39,52) url(../../img/icons/top-arrow.svg);
+    background-position: center 50%;
+    background-repeat: no-repeat;
     width: 56px;
     height: 56px; }
   .material-scrolltop span {
@@ -63,6 +66,6 @@
     color: #fff; }
 
 .material-scrolltop, .material-scrolltop::before {
-  background-image: url(icons/top-arrow.svg);
+  background-image: url(../../img/icons/top-arrow.svg);
   background-position: center 50%;
   background-repeat: no-repeat; }

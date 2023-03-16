@@ -121,7 +121,6 @@ function progress() {
 }
 progress();
 
-// $("body").materialScrollTop();
 
 function numberCount(){
   $(".number .val").appear();
@@ -179,3 +178,29 @@ function addEle() {
 }
 eduButton.on('click', removeEle);
 exeButton.on('click', addEle)
+
+$("body").materialScrollTop();
+
+// header section animation and footer section
+
+const animate = new ScrollReveal({
+  origin: 'bottom',
+  distance: '80px',
+  duration: 1000,
+});
+
+animate.reveal('.header-section');
+animate.reveal('.details');
+animate.reveal('footer', {duration: 1500});
+
+function anFunc(ele, duration = 1000, origin = 'bottom', distance = '80px'){
+  if(document.querySelector(ele)){
+    animate.reveal(ele, {duration: duration, origin: origin, distance: distance});
+  }else{
+    console.log(`${ele} dosen't exit`);
+  }
+}
+
+anFunc('.hero-content', 1500, 'left');
+anFunc('.hero-image', 1600);
+

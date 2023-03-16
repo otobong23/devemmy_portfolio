@@ -112,31 +112,35 @@
 
     <div class="faq-section bg-dark-blue py-[75px] md:py-[115px] lg:py-[115px] flex flex-col">
         <div class="faq-wrapper contain w-11/12 mx-auto flex flex-col mb-[30px]">
-            <div class="col p-10 md:py-[50px] md:px-[45px] lg:py-[60px] lg:px-[55px] bg-very-dark-blue flex-1 flex flex-col lg:flex-row hover:bg-dark-blue group border border-very-dark-blue hover:border-border-close transition-all duration-500">
-                <div class="number w-[120px] h-[120px] bg-dark-blue flex items-center justify-center text-[22px] md:mr-[50px] lg:mr-[60px] group-hover:bg-very-dark-blue text-white">
+            <div class="col p-10 md:py-[50px] md:px-[45px] lg:py-[60px] lg:px-[55px] bg-very-dark-blue flex-1 flex flex-col lg:flex-row hover:bg-dark-blue relative group overflow-hidden border border-very-dark-blue hover:border-border-close transition-all duration-500">
+                <div class="inner-shape inner-shape-top-right"></div>
+                <div class="number w-[120px] h-[120px] bg-dark-blue flex items-center justify-center text-[22px] md:mr-[50px] lg:mr-[60px] group-hover:bg-very-dark-blue text-white z-10">
                     01.
                 </div>
-                <div class="flex-1 lg:mt-0">
+                <div class="flex-1 lg:mt-0 z-10">
                     <h2 class="text-[24px] leading-[1] font-bold text-white title mt-[25px] lg:mt-0">What is UI/UX Design?</h2>
                     <p class="text-base text-text mt-[25px]">
                         UX design refers to the term “user experience design”, while UI stands for “user interface design”.
                          Both elements are crucial to a product and work closely together in building user experience and interface of products .
                     </p>
                 </div>
+                <div class="inner-shape inner-shape-bottom-right"></div>
             </div>
         </div>
 
         <div class="faq-wrapper contain w-11/12 mx-auto flex flex-col">
-            <div class="col p-10 md:py-[50px] md:px-[45px] lg:py-[60px] lg:px-[55px] bg-very-dark-blue flex-1 flex flex-col lg:flex-row hover:bg-dark-blue group border border-very-dark-blue hover:border-border-close transition-all duration-500">
-                <div class="number w-[120px] h-[120px] bg-dark-blue flex items-center justify-center text-[22px] md:mr-[50px] lg:mr-[60px] group-hover:bg-very-dark-blue text-white">
+            <div class="col p-10 md:py-[50px] md:px-[45px] lg:py-[60px] lg:px-[55px] bg-very-dark-blue flex-1 flex flex-col lg:flex-row hover:bg-dark-blue relative group overflow-hidden border border-very-dark-blue hover:border-border-close transition-all duration-500">
+                <div class="inner-shape inner-shape-top-right"></div>
+                <div class="number w-[120px] h-[120px] bg-dark-blue flex items-center justify-center text-[22px] md:mr-[50px] lg:mr-[60px] group-hover:bg-very-dark-blue text-white z-10">
                     02.
                 </div>
-                <div class="flex-1 lg:mt-0">
+                <div class="flex-1 lg:mt-0 z-10">
                     <h2 class="text-[24px] leading-[1] font-bold text-white title mt-[25px] lg:mt-0">How much do you charge to build .... website or app?</h2>
                     <p class="text-base text-text mt-[25px]">
                         Project that i manage fully do not have a fixed price they depend on the feature of software you want to build you can contact me to start   
                     </p>
                 </div>
+                <div class="inner-shape inner-shape-bottom-right"></div>
             </div>
         </div>
     </div>
@@ -174,10 +178,14 @@
             </div>
         </div>
     </footer>
+
+    <button class="material-scrolltop reveal" type="button"></button>
+
     <script src="./assets/scripts/plugins/jquery.min.js"></script>
     <script src="./assets/scripts/plugins/scrollreveal.js"></script>
     <script src="./assets/scripts/plugins/jquery.appear.js"></script>
     <script src="./assets/scripts/plugins/swiper-bundle.min.js"></script>
+    <script src="./assets/scripts/plugins/material-scrolltop.js"></script>
     <script src="./assets/scripts/index.js"></script>
 </body>
 </html>
